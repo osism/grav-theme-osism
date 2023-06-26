@@ -1,0 +1,20 @@
+.legals-wrapper{
+    padding-top: 3rem;
+    
+    .legals{
+
+        a{
+            color:$color-purple-red;
+            transition: 450ms ease-in-out;
+
+            &:hover{
+                color: $color-orange;
+            }
+        }
+        
+        h2, h3{
+            text-align: left;
+        }
+    }
+}
+    

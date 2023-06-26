@@ -1,0 +1,30 @@
+.puretext-wrapper{
+    padding-top: 3rem;
+    
+    .puretext{
+
+        a{
+            color:$color-purple-red;
+            transition: 450ms ease-in-out;
+            hyphens: auto;
+
+            &:hover{
+                color: $color-orange;
+            }
+        }
+        
+        h1, h2, h3, h4{
+            text-align: left;
+        }
+
+        h2{
+            margin: inherit;
+        }
+
+        li{
+            font-size: 120%;
+            margin: .5rem;
+        }
+    }
+}
+    

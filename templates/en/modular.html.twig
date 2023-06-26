@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+    {% block head deferred %}
+        {% include 'partials/metatags.html.twig' %}
+        {% include 'partials/language-selector.hreflang.html.twig' %}
+    {% endblock head %}
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/main.min.css') %}
+    {% endblock %}
+</head>
+<body id="body" class="preload">
+    <iframe src="https://23t.containers.piwik.pro/efbf8969-064e-4229-ac39-6d45db9f0bbf/noscript.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <header id="header" class="header">
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
+    </header>
+    <aside class="language-box-switch">
+        {% block aside %}
+            {% include 'partials/language-switch-box.html.twig' %}
+        {% endblock %}
+    </aside>
+    {% block mobile_navigation %}
+        {% include 'partials/mobile_navigation.html.twig' %}
+    {% endblock %}
+
+    <main id="main" class="main">
+        {% block main %}
+        
+            {% for module in page.collection() %}
+                {{module.content|raw}}
+            {% endfor %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+    </footer>
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/partials/base.js') %}
+        {% do assets.addJs('theme://js/partials/glightbox.js') %}
+        {% do assets.addJs('theme://js/partials/mobile-nav.js') %}
+        {% do assets.addJs('theme://js/partials/scroll.js') %}
+        {% do assets.addJs('theme://js/partials/aos.js') %}
+        {% do assets.addJs('theme://js/partials/init.js') %}
+        {% do assets.addJs('theme://js/partials/swiper-bundle.js') %}
+        {% do assets.addJs('theme://js/partials/swiper.js') %}
+        {% do assets.addJs('theme://js/partials/piwik.js') %}
+        
+    {% endblock %}
+
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
+</body>

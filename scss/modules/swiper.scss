@@ -1,0 +1,53 @@
+// Requires 
+
+@import "../css/swiper-bundle.min.css";
+
+// Swiper One 
+
+.swiper{
+
+    .swiper-container, .swiper-container--alt, .swiper-container--alt-two{
+        min-height: 50vh;
+        max-height: 100%;
+        border-radius: .5rem;
+        color: $color-white;
+
+        .swiper-slide{
+            height: 50vh;
+
+            .swiper-slide__image{
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                transition: 450ms ease-in-out;
+
+                @media screen and (min-width:$breakpoint) {
+                    background-position: unset;
+                }
+            }
+        } 
+    }
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: $color-purple-red!important;
+    top: 40%!important;
+
+    @media screen and (min-width:$breakpoint) {
+        top: 50%!important;
+    }
+}
+
+.swiper-button-prev{
+    left: 5vw!important;
+}
+
+.swiper-button-next{
+    right: 5vw!important;
+}
+
+.swiper-button-prev--alt, .swiper-button-next--alt{
+    top: 21vh!important;
+}
+

@@ -1,0 +1,59 @@
+.darkmode{
+    background-color: $color-black!important;
+    color: $color-white!important;
+  
+    .header{
+      background-color: $color-black;
+  
+      .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+        background-color: $color-white;
+      }
+  
+      .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before {
+        background-color: $color-white;
+        }
+  
+      a{
+        color: $color-white!important;
+  
+        &::after{
+          border-bottom: 2px solid $color-white!important;
+        }
+      }
+  
+      svg{
+        fill: $color-white!important;
+      }
+
+      #styleswitch--moon{
+          display: none;
+      }
+
+      #styleswitch--sun{
+        display: flex;
+    }
+
+    }
+  
+    #mobile-nav-wrapper{
+      background-color: $color-black;
+      color: $color-white;
+    }
+  
+    .main{
+      svg{
+        fill: $color-white;
+      }
+
+      .swiper-slide__boxes{
+        color: $color-white!important;
+        }
+    }
+}
+
+#styleswitch--sun{
+    display: none;
+}
+
+
+

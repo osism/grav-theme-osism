@@ -1,0 +1,100 @@
+.footer{
+    background-color: $color-light-grey;
+    padding: 2.5rem 0 2.5rem 0;
+    -webkit-transition: background-color 450ms linear;
+    -ms-transition: background-color 450ms linear;
+    transition: background-color 450ms linear;
+    border-radius: 0;
+    background-image: url(../images/footer_background.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 3rem 2rem $color-light-grey inset;
+    
+
+    .footer-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .footer__text{
+            text-align: center;
+            width: 100%;
+
+            p{
+                margin: 0;
+            }
+        }
+
+        .footer__contact-button{
+            
+            margin: 2rem 0 2rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+
+            a {
+                background-color: $color-purple-red;
+                padding: 1rem;
+                border-radius: .5rem;
+                text-decoration: none;
+                color: $color-white;
+                display: inline-block;
+                transition: 450ms ease-in-out;
+                border: 1px solid rgba(255,255,255,0);
+
+                &:hover{
+                    background-color: $color-white;
+                    color: $color-purple-red;
+                    border: 1px solid $color-purple-red;
+                }
+
+                &:focus{
+                    background-color: $color-white;
+                    color: $color-purple-red;
+                    border: 1px solid $color-purple-red;
+                }
+            }
+        }
+        .footer__logo{
+            width: 20%;
+            max-width: 10rem;
+
+            @media screen and (min-width:$breakpoint) {
+                width: 25%;
+            }
+
+            svg{
+                max-height: 5rem;
+                width: 100%;
+                height: 100%;
+                fill: $color-grey;
+            }
+        }
+
+        .footer__essentials{
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            width: 100%;
+            padding: 1rem 0;
+
+            a{
+                width: 100%;
+                text-decoration: none;
+                color: $color-grey;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+
+                &:focus{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }     
+}
