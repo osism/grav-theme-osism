@@ -29,7 +29,8 @@
     "gulp-clean-css": "^3.9.4",
     "gulp-csscomb": "^3.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.32.8"
   },
   "scripts": {
     "dev": "gulp watch",

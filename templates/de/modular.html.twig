@@ -10,7 +10,6 @@
     {% endblock %}
 </head>
 <body id="body" class="preload">
-    <iframe src="https://23t.containers.piwik.pro/efbf8969-064e-4229-ac39-6d45db9f0bbf/noscript.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <header id="header" class="header">
         {% block header %}
             {% include 'partials/header.html.twig' %}
@@ -50,8 +49,6 @@
         {% do assets.addJs('theme://js/partials/init.js') %}
         {% do assets.addJs('theme://js/partials/swiper-bundle.js') %}
         {% do assets.addJs('theme://js/partials/swiper.js') %}
-        {% do assets.addJs('theme://js/partials/piwik.js') %}
-        
     {% endblock %}
 
     {% block assets deferred %}

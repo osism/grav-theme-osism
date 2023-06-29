@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sassLibrary = require('sass');
+var sass = require('gulp-sass')(sassLibrary);
 var cleancss = require('gulp-clean-css');
 var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
@@ -19,11 +20,11 @@ function watch() {
   return gulp.watch(watch_dir, build);
 }
 
-function build() {
-  return gulp.src(paths.source)
+function build(done) {
+  gulp.src(paths.source)
       .pipe(sourcemaps.init())
       .pipe(sass({
-            outputStyle: 'compact',
+            outputStyle: 'compressed',
             precision: 10
           }).on('error', sass.logError)
       )
@@ -36,6 +37,7 @@ function build() {
         suffix: '.min'
       }))
       .pipe(gulp.dest(dest_dir));
+  done();
 }
 
 exports.watch = watch;

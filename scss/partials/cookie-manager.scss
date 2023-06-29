@@ -1,0 +1,77 @@
+.cc-window.cc-floating{
+    max-width: 100%;
+    font-family: $font-family-text;
+    font-size: $font-family-text;
+    #tecart-cookie-banner{
+        .cc-header{
+            font-family: $font-family-headline;
+        }
+        
+        a{
+            color: $color-purple-red;
+        }
+        .cc-header{
+            color: $color-purple-red;
+            background: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .cc-btn{
+            margin: 0 .5rem 0 0;
+            text-decoration: none;
+            
+            
+            @media screen and (max-width:538px){
+                margin-top: .5rem!important;
+            }
+        }
+    
+        .cc-allow{
+            background-color: $color-purple-red;
+            border-color: $color-purple-red;
+        }
+    }
+}
+
+#tcb-settings-modal{
+        
+    .tcb-settings-modal-header{
+        .cc-header{
+            padding-left: 0;
+            background: none;
+            color: $color-purple-red;
+            
+
+        }
+    }
+
+    input:checked + .tcb-slider {
+        background-color: $color-purple-red;
+    }
+
+    #tcbSettings{
+        font-family: $font-family-text;
+        font-size: $font-family-text;
+        line-height:1rem;
+        .tcb-switch{
+            height: 11px!important;
+            width: 20px!important;
+        }
+    }
+}
+  
+.cc-revoke.cc-bottom.cc-left{
+    background: url('../images/cookies.webp');
+    background-size: contain;
+    width: 1.3rem;
+    height: 1.3rem;
+    left: 1.25%;
+    bottom: 1rem;
+    transform: translate(0);
+    border-radius: 1rem;
+    background-color: unset!important;
+
+    @media screen and (max-width:$breakpoint) {
+        left: 5%;
+    }
+}
